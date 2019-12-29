@@ -15,7 +15,7 @@ let options = {
   // colors & styles
   loadingBarClass: "loading-bar",
   backgroundColor: "#ddd",
-  color: "#0ff",
+  color: "#2047b4",
   enableShadow: false,
   shadowOptions: "0 -8px 8px 5px",
   // spinner
