@@ -1,6 +1,6 @@
 {
   "name": "pageload.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small and agnostic javascript library for easy & fast page loading spinner. Ready for ES Modules.",
   "main": "lib/pageload.min.js",
   "module": "lib/pageload.min.js",
