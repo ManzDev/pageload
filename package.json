@@ -1,0 +1,55 @@
+{
+  "name": "pageload.js",
+  "version": "1.0.0",
+  "description": "Small and agnostic javascript library for easy & fast page loading spinner. Ready for ES Modules.",
+  "main": "lib/pageload.min.js",
+  "module": "lib/pageload.min.js",
+  "scripts": {
+    "dev": "npm-run-all -p watch -p live",
+    "watch": "NODE_ENV=dev rollup -w -c -e",
+    "live": "live-server dist",
+    "build": "NODE_ENV=pro rollup -c -e",
+    "ghpages": "git subtree push --prefix dist origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManzDev/pageload.js.git"
+  },
+  "keywords": [
+    "loading",
+    "load",
+    "spinner",
+    "page",
+    "pageload",
+    "pageloader"
+  ],
+  "author": "Manz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ManzDev/pageload.js/issues"
+  },
+  "homepage": "https://manzdev.github.io/pageload.js",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-modules": "^0.1.2",
+    "@rollup/plugin-json": "^4.0.1",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-remove-template-literals-whitespace": "^1.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "esm": "^3.2.25",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "rollup": "^1.27.14",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-copy-glob": "^0.3.1",
+    "rollup-plugin-terser": "^5.1.3"
+  }
+}
