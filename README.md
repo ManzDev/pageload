@@ -1,5 +1,9 @@
 # pageload.js
 
+![npm](https://img.shields.io/npm/v/pageload.js)
+![GitHub file size in bytes](https://img.shields.io/github/size/manzdev/pageload.js/lib/pageload.min.js)
+![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/pageload.js)
+
 Small vanilla javascript library 3.5KB (~1.4KB gzipped) for easy and simple page loading spinner.
 Ready for ES Modules. Agnostic. **Zero dependencies**.
 
