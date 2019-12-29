@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PageLoad.js</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script defer type="module">
+      import PageLoad from "./pageload.js";
+      import "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js";
+
+      const options = {
+        autoIncrement: false,
+        fakeMode: true,
+        incrementDelay: 50,
+        fadeIn: false,
+        color: "#2047b4"
+      };
+      PageLoad.start(options);
+
+      const randomColor = () =>
+        [
+          "darkred",
+          "hotpink",
+          "orange",
+          "seagreen",
+          "royalblue",
+          "teal",
+          "slateblue",
+          "mediumpurple",
+          "gold"
+        ][~~(Math.random() * 9)];
+
+      const md = new markdownit();
+
+      document.querySelector(".plstart").onclick = () => PageLoad.start();
+      document.querySelector(".go25").onclick = () => PageLoad.go(25);
+      document.querySelector(".go50").onclick = () => PageLoad.go(50);
+      document.querySelector(".go75").onclick = () => PageLoad.go(75);
+      document.querySelector(".done").onclick = () => PageLoad.done();
+
+      document.querySelector(".changeColor").onclick = () =>
+        PageLoad.start({ ...options, color: randomColor() });
+
+      document.querySelector(".enableShadow").onclick = () =>
+        PageLoad.start({ ...options, enableShadow: true });
+
+      document.querySelector(".enableFadeIn").onclick = () =>
+        PageLoad.start({ ...options, fadeIn: true });
+
+      document.querySelector(".setSlow").onclick = () =>
+        PageLoad.start({
+          ...options,
+          incrementDelay: 200,
+          transitionDelay: 400
+        });
+
+      document.querySelector(".setFast").onclick = () =>
+        PageLoad.start({
+          ...options,
+          incrementDelay: 25,
+          transitionDelay: 50,
+          transitionType: "linear"
+        });
+
+      document.querySelector(".hookAtEnd").onclick = () => {
+        PageLoad.start({
+          ...options,
+          onEnd: () => new Audio("/tada.mp3").play()
+        });
+      };
+
+      fetch("options.md")
+        .then(res => res.text())
+        .then(data => {
+          document.querySelector(".options").innerHTML = md.render(data);
+        });
+    </script>
+  </head>
+  <body>
+    <div class="pointer">👆</div>
+    <div class="page">
+      <header>
+        <h1>💈 PageLoad.js</h1>
+
+        <a
+          class="github-button"
+          href="https://github.com/ManzDev/pageload.js/fork"
+          data-icon="octicon-repo-forked"
+          data-show-count="true"
+          aria-label="Fork ManzDev/pageload.js on GitHub"
+          >Fork</a
+        >
+        <a
+          class="github-button"
+          href="https://github.com/ManzDev/pageload.js"
+          data-show-count="true"
+          aria-label="Star ManzDev/pageload.js on GitHub"
+          >Star</a
+        >
+
+        <p>
+          Small vanilla javascript library 3.5KB (~1.4KB gzipped) for easy and
+          simple page loading spinner.
+        </p>
+        <p>
+          Ready for ES Modules. Agnostic. <strong>Zero dependencies</strong>.
+        </p>
+
+        <h3>Main methods</h3>
+        <button class="plstart">PageLoad.start()</button>
+        <button class="go25">PageLoad.go(25)</button>
+        <button class="go50">PageLoad.go(50)</button>
+        <button class="go75">PageLoad.go(75)</button>
+        <button class="done">PageLoad.done()</button>
+
+        <h3>Additional methods</h3>
+        <button class="changeColor">Change color</button>
+        <button class="enableShadow">Enable shadow</button>
+        <button class="enableFadeIn">Enable fadeIn</button>
+        <button class="setSlow">Set Slow</button>
+        <button class="setFast">Set Fast</button>
+        <button class="hookAtEnd">Add hook at End</button>
+
+        <h3>Usage</h3>
+
+        <pre><code>
+          import PageLoad from "pageload.js";
+          PageLoad.start();
+        </code></pre>
+
+        <h3>Custom Options</h3>
+
+        <pre><code>
+          import PageLoad from "pageload.js";
+          PageLoad.start({
+            autoIncrement: true,
+            color: "mediumpurple",
+            fadeIn: true
+          });
+        </code></pre>
+      </header>
+
+      <h3>Options</h3>
+      <div class="options"></div>
+
+      <h3>Support</h3>
+
+      <i class="fab fa-chrome icon"></i>
+      <i class="fab fa-edge icon"></i>
+      <i class="fab fa-firefox icon"></i>
+      <i class="fab fa-opera icon"></i>
+      <i class="fab fa-safari icon unknown"></i>
+      <i class="fab fa-internet-explorer icon no"></i>
+
+      <footer>
+        <a href="https://github.com/ManzDev/pageload.js">GitHub</a> ·
+        <a href="https://twitter.com/Manz">@Manz</a>
+      </footer>
+    </div>
+  </body>
+</html>

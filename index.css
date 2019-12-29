@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Scope+One&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Scope One", sans-serif;
+}
+
+a {
+  color: #1c37d1;
+}
+a:hover {
+  color: #cc0000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Montserrat, sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+}
+h3 {
+  margin-top: 2.5em;
+  font-size: 32px;
+}
+h4 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  color: #222;
+}
+
+.page {
+  width: 780px;
+  margin: auto;
+  text-align: center;
+}
+
+header {
+  width: 640px;
+  margin: auto;
+}
+
+header p {
+  font-size: 20px;
+  color: #555;
+}
+
+button {
+  background: #eee;
+  border: 2px solid #bbb;
+  color: #666;
+  font-family: "Scope One", sans-serif;
+  font-size: 22px;
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin: 5px;
+  user-select: none;
+}
+
+button:hover {
+  border-color: #999;
+  background: #ddd;
+  color: #888;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+table,
+td {
+  border: 1px solid #eee;
+}
+
+th,
+td {
+  padding: 4px 12px;
+}
+
+th {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+}
+
+td {
+  font-family: "Scope One", sans-serif;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.icon {
+  font-size: 48px;
+  color: #128f12;
+}
+
+.icon.no {
+  color: #ee6060;
+}
+
+.icon.unknown {
+  color: #a7a7a7;
+}
+
+code {
+  font-family: consolas;
+  background: #eee;
+  padding: 2px 8px;
+}
+
+pre code {
+  font-family: Consolas;
+  font-size: 18px;
+  display: block;
+  background: #222;
+  color: #eee;
+  padding: 8px;
+  text-align: left;
+}
+
+.pointer {
+  position: fixed;
+  top: 16px;
+  left: 32px;
+  font-size: 32px;
+  animation: pointer 0.5s ease infinite, off 1s ease 1 2s forwards;
+}
+
+@keyframes pointer {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes off {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+footer {
+  margin: 3em 0;
+}
