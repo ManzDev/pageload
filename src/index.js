@@ -110,7 +110,7 @@ export default class LoadingBar {
       }
       .number {
         position: fixed;
-        top: 45px;
+        top: ${options.height + 40}px;
         right: 10px;
         font-family: sans-serif;
         font-size: 14px;
@@ -121,7 +121,7 @@ export default class LoadingBar {
       }
       .spinbar {
         position: fixed;
-        top: 15px;
+        top: ${options.height + 10}px;
         right: 15px;
         width: 15px;
         height: 15px;
