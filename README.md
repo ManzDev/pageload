@@ -1,8 +1,8 @@
 # PageLoad.js
 
-![npm](https://img.shields.io/npm/v/pageload)
+![npm](https://img.shields.io/npm/v/@manz/pageload)
 ![GitHub file size in bytes](https://img.shields.io/github/size/manzdev/pageload/lib/pageload.min.js)
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/pageload)
+![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@manz/pageload)
 
 Small vanilla javascript library 3.5KB (~1.4KB gzipped) for easy and simple page loading spinner.
 Ready for ES Modules. Agnostic. **Zero dependencies**.
@@ -12,11 +12,11 @@ Ready for ES Modules. Agnostic. **Zero dependencies**.
 ### 1. Vía NPM
 
 ```bash
-npm install pageload
+npm install @manz/pageload
 ```
 
 ```js
-import PageLoad from "pageload";
+import PageLoad from "@manz/pageload";
 PageLoad.start({ fakeMode: true });
 ```
 
@@ -24,7 +24,7 @@ PageLoad.start({ fakeMode: true });
 
 ```html
 <script type="module">
-  import PageLoad from "//unpkg.com/pageload";
+  import PageLoad from "//unpkg.com/@manz/pageload";
   PageLoad.start({ fakeMode: true });
 </script>
 ```
@@ -36,7 +36,7 @@ PageLoad.start({ fakeMode: true });
 ### FadeIn until completed
 
 ```js
-import PageLoad from "//unpkg.com/pageload";
+import PageLoad from "//unpkg.com/@manz/pageload";
 PageLoad.start({
   autoIncrement: true,
   color: "mediumpurple",
@@ -47,7 +47,7 @@ PageLoad.start({
 ### Progress bar on dark mode
 
 ```js
-import PageLoad from "//unpkg.com/pageload";
+import PageLoad from "//unpkg.com/@manz/pageload";
 document.body.style.backgroundColor = "black";
 PageLoad.start({
   fakeMode: true,
