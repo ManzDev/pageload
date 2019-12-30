@@ -71,7 +71,7 @@
       document.querySelector(".hookAtEnd").onclick = () => {
         PageLoad.start({
           ...options,
-          onEnd: () => new Audio("/tada.mp3").play()
+          onEnd: () => new Audio("/pageload/tada.mp3").play()
         });
       };
 
