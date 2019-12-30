@@ -1,5 +1,5 @@
 {
-  "name": "pageload",
+  "name": "@manz/pageload",
   "version": "1.0.2",
   "description": "Small and agnostic javascript library for easy & fast page loading spinner. Ready for ES Modules.",
   "main": "lib/pageload.min.js",
