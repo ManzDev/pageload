@@ -1,8 +1,8 @@
-# pageload.js
+# PageLoad.js
 
-![npm](https://img.shields.io/npm/v/pageload.js)
-![GitHub file size in bytes](https://img.shields.io/github/size/manzdev/pageload.js/lib/pageload.min.js)
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/pageload.js)
+![npm](https://img.shields.io/npm/v/pageload)
+![GitHub file size in bytes](https://img.shields.io/github/size/manzdev/pageload/lib/pageload.min.js)
+![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/pageload)
 
 Small vanilla javascript library 3.5KB (~1.4KB gzipped) for easy and simple page loading spinner.
 Ready for ES Modules. Agnostic. **Zero dependencies**.
@@ -12,11 +12,11 @@ Ready for ES Modules. Agnostic. **Zero dependencies**.
 ### 1. Vía NPM
 
 ```bash
-npm install pageload.js
+npm install pageload
 ```
 
 ```js
-import PageLoad from "pageload.js";
+import PageLoad from "pageload";
 PageLoad.start({ fakeMode: true });
 ```
 
@@ -24,7 +24,7 @@ PageLoad.start({ fakeMode: true });
 
 ```html
 <script type="module">
-  import PageLoad from "//unpkg.com/pageload.js";
+  import PageLoad from "//unpkg.com/pageload";
   PageLoad.start({ fakeMode: true });
 </script>
 ```
@@ -36,7 +36,7 @@ PageLoad.start({ fakeMode: true });
 ### FadeIn until completed
 
 ```js
-import PageLoad from "//unpkg.com/pageload.js";
+import PageLoad from "//unpkg.com/pageload";
 PageLoad.start({
   autoIncrement: true,
   color: "mediumpurple",
@@ -47,7 +47,7 @@ PageLoad.start({
 ### Progress bar on dark mode
 
 ```js
-import PageLoad from "//unpkg.com/pageload.js";
+import PageLoad from "//unpkg.com/pageload";
 document.body.style.backgroundColor = "black";
 PageLoad.start({
   fakeMode: true,
@@ -58,4 +58,4 @@ PageLoad.start({
 });
 ```
 
-More info about [pageload.js](https://manzdev.github.io/pageload.js) and [options](https://manzdev.github.io/pageload.js/#options).
+More info about [pageload](https://manzdev.github.io/pageload) and [options](https://manzdev.github.io/pageload/#options).

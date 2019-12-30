@@ -1,5 +1,5 @@
 {
-  "name": "pageload.js",
+  "name": "pageload",
   "version": "1.0.1",
   "description": "Small and agnostic javascript library for easy & fast page loading spinner. Ready for ES Modules.",
   "main": "lib/pageload.min.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ManzDev/pageload.js.git"
+    "url": "git+https://github.com/ManzDev/pageload.git"
   },
   "keywords": [
     "loading",
@@ -26,9 +26,9 @@
   "author": "Manz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ManzDev/pageload.js/issues"
+    "url": "https://github.com/ManzDev/pageload/issues"
   },
-  "homepage": "https://manzdev.github.io/pageload.js",
+  "homepage": "https://manzdev.github.io/pageload",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-modules": "^0.1.2",
